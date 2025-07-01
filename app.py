@@ -1,8 +1,10 @@
 import streamlit as st
 import lyricsgenius
 from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain, SequentialChain
-from langchain.chat_models import ChatOpenAI
+from langchain_community.chat_models import ChatOpenAI
+from langchain.chains import SequentialChain
+from langchain.chains.llm import LLMChain  # Still works but deprecated, optional to switch
+
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 
